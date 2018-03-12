@@ -40,6 +40,9 @@ for i in range(0,Document.FilteringSchemes.Count):
     Document.FilteringSchemes[i].ResetAllFilters()
 
 # iterates through user tables, and filters data based on the user id
+# In this example, we are only connected to one data source,
+# the following algorithm needs to be changed if there is more than one 
+# data source
 for eachPage in myDocument.Pages:
 	myPanel = eachPage.FilterPanel
 	myFilter=myPanel.TableGroups[0].GetFilter("AliasFilter")
